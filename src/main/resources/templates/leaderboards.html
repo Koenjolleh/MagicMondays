@@ -4,8 +4,239 @@
 <body>
 <header th:replace="fragments/layout::header"></header>
 <div th:replace="fragments/layout::navbar"></div>
-<div class="row">
-    <div class="col-sm"></div>
+<div class="container">
+    <div class="row topRow">
+        <div class="col-sm">
+            <h2>Leaderboards</h2>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#kingofthehillBO1">King of the Hill BO1</a>
+                </li>
+                <li>
+                    <a class="nav-link" data-toggle="tab" href="#kingofthehillBO3">King of the Hill BO3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#standardBO1">Standard BO1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#standardBO3">Standard BO3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#commander">Commander</a>
+                </li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div id="kingofthehillBO1" class="container tab-pane active"><br>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <h2>Rules</h2>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">1. </li>
+                                <li class="list-group-item">Second item</li>
+                                <li class="list-group-item">Third item</li>
+                                <li class="list-group-item">Fourth item</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-10">
+                            <table class="table table-dark table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Firstname</th>
+                                        <th>Lastname</th>
+                                        <th>Email</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>John</td>
+                                        <td>Doe</td>
+                                        <td>john@example.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mary</td>
+                                        <td>Moe</td>
+                                        <td>mary@example.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td>July</td>
+                                        <td>Dooley</td>
+                                        <td>july@example.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ron</td>
+                                        <td>Weasley</td>
+                                        <td>ronweasley17@example.com</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="kingofthehillBO3" class="container tab-pane fade"><br>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <h2>Rules</h2>
+                        </div>
+                        <div class="col-sm-10">
+                            <table class="table table-dark table-hover">
+                                <thead>
+                                <tr>
+                                    <th>Firstname</th>
+                                    <th>Lastname</th>
+                                    <th>Email</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>John</td>
+                                    <td>Doe</td>
+                                    <td>john@example.com</td>
+                                </tr>
+                                <tr>
+                                    <td>Mary</td>
+                                    <td>Moe</td>
+                                    <td>mary@example.com</td>
+                                </tr>
+                                <tr>
+                                    <td>July</td>
+                                    <td>Dooley</td>
+                                    <td>july@example.com</td>
+                                </tr>
+                                <tr>
+                                    <td>Ron</td>
+                                    <td>Weasley</td>
+                                    <td>ronweasley17@example.com</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="standardBO1" class="container tab-pane fade"><br>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <h2>Rules</h2>
+                        </div>
+                        <div class="col-sm-10">
+                            <table class="table table-dark table-hover">
+                                <thead>
+                                <tr>
+                                    <th>Firstname</th>
+                                    <th>Lastname</th>
+                                    <th>Email</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>John</td>
+                                    <td>Doe</td>
+                                    <td>john@example.com</td>
+                                </tr>
+                                <tr>
+                                    <td>Mary</td>
+                                    <td>Moe</td>
+                                    <td>mary@example.com</td>
+                                </tr>
+                                <tr>
+                                    <td>July</td>
+                                    <td>Dooley</td>
+                                    <td>july@example.com</td>
+                                </tr>
+                                <tr>
+                                    <td>Ron</td>
+                                    <td>Weasley</td>
+                                    <td>ronweasley17@example.com</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="standardBO3" class="container tab-pane fade"><br>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <h2>Rules</h2>
+                        </div>
+                        <div class="col-sm-10">
+                            <table class="table table-dark table-hover">
+                                <thead>
+                                <tr>
+                                    <th>Firstname</th>
+                                    <th>Lastname</th>
+                                    <th>Email</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>John</td>
+                                    <td>Doe</td>
+                                    <td>john@example.com</td>
+                                </tr>
+                                <tr>
+                                    <td>Mary</td>
+                                    <td>Moe</td>
+                                    <td>mary@example.com</td>
+                                </tr>
+                                <tr>
+                                    <td>July</td>
+                                    <td>Dooley</td>
+                                    <td>july@example.com</td>
+                                </tr>
+                                <tr>
+                                    <td>Ron</td>
+                                    <td>Weasley</td>
+                                    <td>ronweasley17@example.com</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="commander" class="container tab-pane fade"><br>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <h2>Rules</h2>
+                        </div>
+                        <div class="col-sm-10">
+                            <table class="table table-dark table-hover">
+                                <thead>
+                                <tr>
+                                    <th>Firstname</th>
+                                    <th>Lastname</th>
+                                    <th>Email</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>John</td>
+                                    <td>Doe</td>
+                                    <td>john@example.com</td>
+                                </tr>
+                                <tr>
+                                    <td>Mary</td>
+                                    <td>Moe</td>
+                                    <td>mary@example.com</td>
+                                </tr>
+                                <tr>
+                                    <td>July</td>
+                                    <td>Dooley</td>
+                                    <td>july@example.com</td>
+                                </tr>
+                                <tr>
+                                    <td>Ron</td>
+                                    <td>Weasley</td>
+                                    <td>ronweasley17@example.com</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <footer th:replace="fragments/layout::footer"></footer>
 </body>

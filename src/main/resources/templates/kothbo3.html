@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="fragments/layout::relics"></head>
+<body>
+<header th:replace="fragments/layout::header"></header>
+<div th:replace="fragments/layout::navbar"></div>
+<div class="container">
+    <div class="row topRow">
+        <div class="col-sm">
+            <h1>King of the Hill</h1><h2>Best of 3</h2><br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <h3>Rules</h3>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">1. Standard legal cards only.</li>
+                <li class="list-group-item">2. Roll a dice at the beginning of the first match. Winner chooses to be on the play or on the draw.</li>
+                <li class="list-group-item">3. The loser of a match in a best of 3 decides weather to be on the play or on the draw.</li>
+                <li class="list-group-item">4. Winner stays as the reigning king, loser makes room for a new challenger.</li>
+                <li class="list-group-item">5. Challenger always decides weather or not he wants to be on the draw or on the play.</li>
+                <li class="list-group-item">6. The reigning king cannot sideboard until he has been dethroned.</li>
+            </ul>
+        </div>
+        <div class="col-sm-8">
+            <table class="table table-dark table-hover">
+                <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>john@example.com</td>
+                </tr>
+                <tr>
+                    <td>Mary</td>
+                    <td>Moe</td>
+                    <td>mary@example.com</td>
+                </tr>
+                <tr>
+                    <td>July</td>
+                    <td>Dooley</td>
+                    <td>july@example.com</td>
+                </tr>
+                <tr>
+                    <td>Ron</td>
+                    <td>Weasley</td>
+                    <td>ronweasley17@example.com</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<footer th:replace="fragments/layout::footer"></footer>
+</body>
+<th:block th:replace="fragments/layout::scripts"/>
+</html>
