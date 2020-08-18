@@ -26,31 +26,18 @@
             <table class="table table-dark table-hover">
                 <thead>
                 <tr>
-                    <th>Firstname</th>
-                    <th>Lastname</th>
-                    <th>Email</th>
+                    <th>Player</th>
+                    <th>Wins</th>
+                    <th>Losses</th>
+                    <th>Difference</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>john@example.com</td>
-                </tr>
-                <tr>
-                    <td>Mary</td>
-                    <td>Moe</td>
-                    <td>mary@example.com</td>
-                </tr>
-                <tr>
-                    <td>July</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
-                </tr>
-                <tr>
-                    <td>Ron</td>
-                    <td>Weasley</td>
-                    <td>ronweasley17@example.com</td>
+                <tr th:each="player: ${commanderStanding}">
+                    <td th:text="${player.player_name}"></td>
+                    <td th:text="${player.wins}"></td>
+                    <td th:text="${player.losses}"></td>
+                    <td th:text="${player.difference}"></td>
                 </tr>
                 </tbody>
             </table>
