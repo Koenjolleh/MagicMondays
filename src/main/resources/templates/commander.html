@@ -28,16 +28,12 @@
                 <tr>
                     <th>Player</th>
                     <th>Wins</th>
-                    <th>Losses</th>
-                    <th>Difference</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr th:each="player: ${commanderStanding}">
                     <td th:text="${player.player_name}"></td>
                     <td th:text="${player.wins}"></td>
-                    <td th:text="${player.losses}"></td>
-                    <td th:text="${player.difference}"></td>
                 </tr>
                 </tbody>
             </table>
