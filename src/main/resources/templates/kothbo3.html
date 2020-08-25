@@ -4,8 +4,8 @@
 <body>
 <header th:replace="fragments/layout::header"></header>
 <div th:replace="fragments/layout::navbar"></div>
-<div class="container">
-    <div class="row topRow">
+<div class="container"><br>
+    <div class="row">
         <div class="col-sm">
             <h1>King of the Hill</h1><h2>Best of 3</h2><br>
         </div>
@@ -30,6 +30,7 @@
                     <th>Wins</th>
                     <th>Losses</th>
                     <th>Difference</th>
+                    <th>Details</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -38,12 +39,13 @@
                     <td th:text="${player.wins}"></td>
                     <td th:text="${player.losses}"></td>
                     <td th:text="${player.difference}"></td>
+                    <td><a th:href="@{/playerDetails(player_id=${player.player_id})}" class="btn btn-secondary" >Details</a></td>
                 </tr>
                 </tbody>
             </table>
         </div>
     </div>
-</div>
+</div><br>
 <footer th:replace="fragments/layout::footer"></footer>
 </body>
 <th:block th:replace="fragments/layout::scripts"/>

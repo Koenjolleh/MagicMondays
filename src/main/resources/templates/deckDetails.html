@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="fragments/layout::relics"></head>
+<body>
+<header th:replace="fragments/layout::header"></header>
+<div th:replace="fragments/layout::navbar"></div>
+<div class="container"><br>
+    <div class="row">
+        <div class="col-sm">
+            <h1 th:text="${deck.deck_name}"></h1>
+        </div>
+    </div><br>
+    <div class="row">
+        <div class="col-sm-4">
+
+        </div>
+        <div class="col-sm-8">
+            <table class="table table-dark table-hover">
+                <thead>
+                <tr>
+                    <th>Format</th>
+                    <th>Wins</th>
+                    <th>Losses</th>
+                    <th>Win %</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="record: ${record_list}">
+                    <td th:text="${record.format}"></td>
+                    <td th:text="${record.wins}"></td>
+                    <td th:text="${record.losses}"></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div><br>
+<footer th:replace="fragments/layout::footer"></footer>
+</body>
+<th:block th:replace="fragments/layout::scripts"/>
+</html>

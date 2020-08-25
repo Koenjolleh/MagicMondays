@@ -16,9 +16,4 @@ public class HomeController {
         return "deckBuilder";
     }
 
-    @GetMapping("/leaderboards")
-    public String leaderboards(){
-        return "leaderboards";
-    }
-
 }
