@@ -1,13 +1,13 @@
 package com.example.magicmondays.DAO;
 
 import com.example.magicmondays.Model.Deck;
-import com.example.magicmondays.Model.Player;
 import com.example.magicmondays.Model.Record;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,17 +26,10 @@ public class DeckDetailService {
 
     public List<Record> deckRecordList(int deck_id){
 
-        List<Record> fullRecordList = iRecordRepository.findAll();
-        List<Record> recordList = new ArrayList<>();
+        Query q = entityManager.createNativeQuery("SELECT * FROM magic_schema.record WHERE deck_id_fk = :deck_id", Record.class);
+        q.setParameter("deck_id", deck_id);
 
-        //Adds decks that are associated with the player to the deckList
-        for(Record record: fullRecordList){
-            if(record.getDeck_id_fk() == deck_id){
-                recordList.add(record);
-            }
-        }
-
-        return recordList;
+        return q.getResultList();
     }
 
 }

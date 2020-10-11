@@ -7,6 +7,8 @@ import com.example.magicmondays.Model.Standings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -22,6 +24,9 @@ public class LeaderboardService {
 
     @Autowired
     private IRecordRepository iRecordRepository;
+
+    @PersistenceContext
+    private EntityManager entityManager;
 
     public List<Standings> kothbo1Standing(){
 
@@ -60,6 +65,9 @@ public class LeaderboardService {
 
     public List<Standings> findStanding(String format){
 
+//        something like this, need to figure out how to do the sub quearies, maybe too much of a hassle
+//        entityManager.createQuery("SELECT new Standings(a.player_id, a.player_name, )",Standings.class);
+
         ArrayList<Standings> currentStandings = new ArrayList<>();
 
         List<Player> players = iPlayerRepository.findAll();
@@ -85,8 +93,10 @@ public class LeaderboardService {
 
         // Sort based on format
         if(format.equals("Commander")){
+            // Sort based on wins
             Collections.sort(currentStandings, (o1, o2) -> o2.getWins() - o1.getWins());
         } else {
+            // Sort based on wins minus losses
             Collections.sort(currentStandings, (o1, o2) -> o2.getDifference() - o1.getDifference());
         }
 

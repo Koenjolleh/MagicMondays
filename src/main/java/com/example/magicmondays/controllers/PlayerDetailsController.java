@@ -16,6 +16,8 @@ public class PlayerDetailsController {
     @GetMapping("/playerDetails")
     public String playerDetails(@RequestParam("player_id") int player_id, Model model){
 
+
+        //Exception handling. Just do it.
         model.addAttribute("player", playerDetailService.playerDetails(player_id));
         model.addAttribute("deck_list", playerDetailService.playerDeckList(player_id));
 
