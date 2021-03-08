@@ -1,4 +1,4 @@
-package com.example.magicmondays.controllers;
+package com.example.magicmondays.Controllers;
 
 import com.example.magicmondays.DAO.PlayerDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
