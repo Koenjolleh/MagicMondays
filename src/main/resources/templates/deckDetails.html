@@ -25,10 +25,10 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr th:each="record: ${record_list}">
-                    <td th:text="${record.format}"></td>
-                    <td th:text="${record.wins}"></td>
-                    <td th:text="${record.losses}"></td>
+                <tr th:each="deckRecord: ${record_list}">
+                    <td th:text="${deckRecord.format}"></td>
+                    <td th:text="${deckRecord.wins}"></td>
+                    <td th:text="${deckRecord.losses}"></td>
                     <td></td>
                 </tr>
                 </tbody>
