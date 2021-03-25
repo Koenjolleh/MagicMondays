@@ -2,22 +2,21 @@ package com.example.magicmondays.DAO;
 
 import com.example.magicmondays.Model.Deck;
 import com.example.magicmondays.Model.DeckRecord;
-import com.example.magicmondays.Model.Player;
 import com.example.magicmondays.Model.Standings;
+//import com.example.magicmondays.Model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 @Service
 public class LeaderboardService {
 
     @Autowired
-    private IPlayerRepository iPlayerRepository;
+    private IAppUserRepository iAppUserRepository;
 
     @Autowired
     private IDeckRepository iDeckRepository;
@@ -69,10 +68,10 @@ public class LeaderboardService {
 //        entityManager.createQuery("SELECT new Standings(a.player_id, a.player_name, )",Standings.class);
 
         ArrayList<Standings> currentStandings = new ArrayList<>();
-
-        List<Player> players = iPlayerRepository.findAll();
-        List<Deck> decks = iDeckRepository.findAll();
-        List<DeckRecord> records = iDeckRecordRepository.findAll();
+//
+//        List<LorteUser> users = iPlayerRepository.findAll();
+//        List<Deck> decks = iDeckRepository.findAll();
+//        List<DeckRecord> records = iDeckRecordRepository.findAll();
 
         //Goes over each players decks and adds up wins and losses based on format input value
 //        for(Player player: players){

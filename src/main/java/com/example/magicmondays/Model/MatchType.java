@@ -1,9 +1,6 @@
 package com.example.magicmondays.Model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class MatchType {
@@ -12,6 +9,7 @@ public class MatchType {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long match_type_id;
 
+    @Column(unique = true, nullable = false)
     private String match_type;
 
     public MatchType() {

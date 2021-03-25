@@ -12,15 +12,15 @@ public class Deck {
     private Long deck_id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "player_id", nullable = false)
-    private Player player;
+    @JoinColumn(name = "app_user_id", nullable = false)
+    private AppUser appUser;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "deck_color_id")
+    @JoinColumn(name = "deck_color_id", nullable = false)
     private DeckColor deck_color;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "deck_type_id")
+    @JoinColumn(name = "deck_type_id", nullable = false)
     private DeckType deck_type;
 
     @OneToMany(mappedBy = "deck")

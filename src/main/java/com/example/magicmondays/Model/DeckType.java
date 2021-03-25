@@ -1,9 +1,6 @@
 package com.example.magicmondays.Model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class DeckType {
@@ -12,6 +9,7 @@ public class DeckType {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long deck_type_id;
 
+    @Column(unique = true, nullable = false)
     private String deck_type;
 
     public DeckType() {

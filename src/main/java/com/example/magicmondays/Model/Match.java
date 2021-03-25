@@ -1,6 +1,7 @@
 package com.example.magicmondays.Model;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,11 +13,11 @@ public class Match {
     private Long match_id;
 
     @ManyToOne
-    @JoinColumn(name = "format_id")
+    @JoinColumn(name = "format_id", nullable = false)
     private Format format;
 
     @ManyToOne
-    @JoinColumn(name = "match_type_id")
+    @JoinColumn(name = "match_type_id", nullable = false)
     private MatchType match_type;
 
     @ManyToMany
@@ -27,7 +28,11 @@ public class Match {
     )
     Set<Deck> decks = new HashSet<>();
 
+    @Column(nullable = false)
     private int winner_id;
+
+    //variable for date of the match?
+    private LocalDate date_of_match;
 
     public Match() {
     }

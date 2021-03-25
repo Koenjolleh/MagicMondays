@@ -14,6 +14,7 @@ public class Format {
     @OneToMany(mappedBy = "format")
     private Set<DeckRecord> deck_records = new HashSet<>();
 
+    @Column(unique = true, nullable = false)
     private String format;
 
     public Format() {

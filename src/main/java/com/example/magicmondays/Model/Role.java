@@ -3,15 +3,16 @@ package com.example.magicmondays.Model;
 import javax.persistence.*;
 
 @Entity
-public class Player {
+public class Role {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long player_id;
+    private Long role_id;
 
-    private String player_name;
+    @Column(unique = true, nullable = false)
+    private String role;
 
-    public Player() {
+    public Role(){
     }
 
 }
