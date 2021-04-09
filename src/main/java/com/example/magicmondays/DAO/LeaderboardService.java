@@ -1,16 +1,13 @@
 package com.example.magicmondays.DAO;
 
-import com.example.magicmondays.Model.Deck;
-import com.example.magicmondays.Model.DeckRecord;
-import com.example.magicmondays.Model.Standings;
+import com.example.magicmondays.Model.*;
 //import com.example.magicmondays.Model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 @Service
 public class LeaderboardService {
@@ -24,8 +21,32 @@ public class LeaderboardService {
     @Autowired
     private IDeckRecordRepository iDeckRecordRepository;
 
+    @Autowired
+    private IFormatRepository iFormatRepository;
+
+    @Autowired
+    private IMatchRepository iMatchRepository;
+
     @PersistenceContext
     private EntityManager entityManager;
+
+    public List<Match> formatStandings(){
+
+//        List<Format> formatList = iFormatRepository.findAll();
+//
+//        for(Format format: formatList){
+//            System.out.println(format);
+//        }
+
+        List<Match> matchList = iMatchRepository.findAll();
+
+        for(Match match: matchList){
+            System.out.println(match);
+        }
+
+
+        return matchList;
+    }
 
     public List<Standings> kothbo1Standing(){
 

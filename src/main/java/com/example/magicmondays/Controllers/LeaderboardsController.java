@@ -12,6 +12,14 @@ public class LeaderboardsController {
     @Autowired
     private LeaderboardService leaderboardService;
 
+    @GetMapping("/leaderboards")
+    public String leaderboards(Model model){
+
+        leaderboardService.formatStandings();
+
+        return "leaderboards";
+    }
+
     @GetMapping("/kothbo1")
     public String kothbo1(Model model){
 

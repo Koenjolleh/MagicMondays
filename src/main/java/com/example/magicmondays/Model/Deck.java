@@ -13,7 +13,7 @@ public class Deck {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "app_user_id", nullable = false)
-    private AppUser appUser;
+    private AppUser app_user;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "deck_color_id", nullable = false)

@@ -12,11 +12,11 @@ public class Match {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long match_id;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "format_id", nullable = false)
     private Format format;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "match_type_id", nullable = false)
     private MatchType match_type;
 
@@ -29,12 +29,22 @@ public class Match {
     Set<Deck> decks = new HashSet<>();
 
     @Column(nullable = false)
-    private int winner_id;
+    private Long winner_id;
 
-    //variable for date of the match?
     private LocalDate date_of_match;
 
     public Match() {
     }
 
+    @Override
+    public String toString() {
+        return "Match{" +
+                "match_id=" + match_id +
+                ", format=" + format +
+                ", match_type=" + match_type +
+                ", decks=" + decks +
+                ", winner_id=" + winner_id +
+                ", date_of_match=" + date_of_match +
+                '}';
+    }
 }
